@@ -10,7 +10,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-app.use(cors({ origin: process.env.CLIENT_URL || '*' }));
+app.use(cors());
 app.use(express.json());
 
 app.get('/health', (req, res) => {
@@ -22,7 +22,7 @@ app.use('/api/tasks', taskRoutes);
 app.use(errorHandler);
 
 mongoose
-  .connect(process.env.MONGODB_URI || 'mongodb://127.0.0.1:27017/task-tracker')
+  .connect(process.env.MONGODB_URI)
   .then(() => {
     console.log('Connected to MongoDB');
     app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
