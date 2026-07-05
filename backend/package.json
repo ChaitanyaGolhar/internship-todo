@@ -1,0 +1,17 @@
+{
+  "name": "task-tracker-backend",
+  "version": "1.0.0",
+  "description": "Express backend for the Task Tracker MERN app",
+  "type": "module",
+  "scripts": {
+    "dev": "node --watch server.js",
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.1",
+    "express": "^4.21.2",
+    "mongodb-memory-server": "^10.1.0",
+    "mongoose": "^8.8.3"
+  }
+}
